@@ -112,13 +112,9 @@
   document.getElementById('rok').textContent = get('rok');
 
   const img = document.getElementById('zdjecie');
-  const baseUrl = 'https://cocoflannel.github.io/mosaics/thumbnails/';
-
-  if (nr) {
-    img.src = `${baseUrl}${encodeURIComponent(nr)}.jpg`;
-  } else {
-    img.src = `${baseUrl}default.jpg`;
-  }
+  const base = 'https://cocoflannel.github.io/mosaics/thumbnails/';
+  img.onerror = () => img.src = `${base}default.jpg`;
+  img.src = `${base}${nr ? encodeURIComponent(nr) : 'default'}.jpg`;
   
 </script>
 </body>
