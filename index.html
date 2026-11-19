@@ -111,10 +111,21 @@
   document.getElementById('autor').textContent = get('autor');
   document.getElementById('rok').textContent = get('rok');
 
+  const img = document.getElementById('zdjecie');
+  const baseUrl = 'https://cocoflannel.github.io/mosaics/thumbnails/';
+  const defaultImg = `${baseUrl}default.jpg`;
+
+  img.onerror = function () {
+    this.onerror = null;
+    this.src = defaultImg;
+  };
+
   if (nr) {
-    document.getElementById('zdjecie').src =
-      `https://cocoflannel.github.io/mosaics/thumbnails/${encodeURIComponent(nr)}.jpg`;
+    img.src = `${baseUrl}${encodeURIComponent(nr)}.jpg`;
+  } else {
+    img.src = defaultImg;
   }
+  
 </script>
 </body>
 </html>
