@@ -114,7 +114,7 @@
   const img = document.getElementById('zdjecie');
   const base = 'https://cocoflannel.github.io/mosaics/thumbnails/';
   img.onerror = () => img.src = `${base}default.jpg`;
-  img.src = `${base}${nr ? encodeURIComponent(nr) : 'default'}.jpg`;
+  img.src = `${base}${encodeURIComponent(nr)}.jpg`;
   
 </script>
 </body>
