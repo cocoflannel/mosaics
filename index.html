@@ -93,9 +93,9 @@
     </div>
 
     <div class="col-right">
-      <div><span class="ico">📖</span> <strong>Nazwa:</strong> <span id="nazwa"></span></div>
+      <div><span class="ico">📖</span> <strong>Tytuł:</strong> <span id="tytul"></span></div>
       <div><span class="ico">👤</span> <strong>Autorstwo:</strong> <span id="autorstwo"></span></div>
-      <div><span class="ico">🗓️</span> <strong>Rok:</strong> <span id="rok"></span></div>
+      <div><span class="ico">🗓️</span> <strong>Rok powstania:</strong> <span id="rok"></span></div>
     </div>
   </div>
 
@@ -107,7 +107,7 @@
   document.getElementById('nr').textContent = nr;
   document.getElementById('opis').textContent = get('opis');
   document.getElementById('adres').textContent = get('adres');
-  document.getElementById('nazwa').textContent = get('tytul') || get('nazwa');
+  document.getElementById('tytul').textContent = get('tytul');
   document.getElementById('autorstwo').textContent = get('autorstwo');
   document.getElementById('rok').textContent = get('rok');
 
